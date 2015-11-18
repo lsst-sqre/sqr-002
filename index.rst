@@ -31,10 +31,15 @@ In this note, we describe two formats for pre-built binaries:
 * :ref:`nebula-images`
 * :ref:`docker-containers`
 
-Open questions
---------------
+Desired Feedback
+----------------
 
-- How many users would like Debian/Ubuntu based VM images, containers, packages?
+- Success and/or failure reports -- is anything broken?
+
+- Are there any other binary distribution methods desired by end-users?  Eg.
+  Debian/Ubuntu based VM images, containers, packages?
+
+- How do binary products integrate into existing workflows?
 
 
 Vagrant based demonstration
