@@ -13,9 +13,9 @@ Centos 7
     sudo chgrp dockerroot /var/run/docker.sock
     sudo usermod --append --groups dockerroot $USER
 
-In order for the permissions on `docker.sock` to persist across service/system
-restarts, this line needs to be inserted into the systemd docker service file
-at `/lib/systemd/system/docker.service/` in the `[Service]` section.
+In order for the permissions on ``docker.sock`` to persist across service/system
+restarts, this line needs to be inserted into the ``systemd`` docker service file at
+``/lib/systemd/system/docker.service/`` in the ``[Service]`` section.
 
 .. code-block:: sh
 
@@ -23,7 +23,7 @@ at `/lib/systemd/system/docker.service/` in the `[Service]` section.
     ...
      ExecStartPost=/usr/bin/chown root:dockerroot /var/run/docker.sock
 
-The service file may be edited by hand or in an automated fashion with `augeas`
+The service file may be edited by hand or in an automated fashion with ``augeas``
 (recommended).
 
 .. code-block:: sh
