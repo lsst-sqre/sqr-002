@@ -1,11 +1,12 @@
 Installing Vagrant
 ==================
 
-Official binary vagrant packages for several platforms are available from:
+Official binary vagrant packages for several platforms are available from
 https://www.vagrantup.com/downloads
 
 Cut'n'paste for OSX
 -------------------
+
 .. code-block:: sh
 
     wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4.dmg
