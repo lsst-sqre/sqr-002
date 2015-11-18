@@ -45,7 +45,7 @@ portable development environments." -- in other words, it is essentially a user
 friendly interface for spawning and accessing virtual machines.
 
 A demonstration of launching VM instances on the NCSA Nebula OpenStack system
-with vagrant has been created called `vagrant-nebula`_.  The two brief walk
+with Vagrant has been created called `vagrant-nebula`_.  The two brief walk
 throughs below use this repository.
 
 This simple `vagrant cheat sheet`_ may be useful.
@@ -65,6 +65,15 @@ account, and has `Vagrant`_ installed.
   rc file into your shell's environment.
 
 .. _Getting Nebula Credentials: https://github.com/lsst-sqre/vagrant-nebula#getting-nebula-credentials
+
+Now, choose your adventure:
+
+* :ref:`Docker container <vagrant-docker-run>`
+* :ref:`Nebula instance <vagrant-nebula-run>`
+
+.. _vagrant-nebula: https://github.com/lsst-sqre/vagrant-nebula
+
+.. _vagrant-docker-run:
 
 Running a docker image on top a Nebula instance
 -----------------------------------------------
@@ -86,16 +95,7 @@ instance's shell, run docker:
     docker pull lsstsqre/centos:7-stack-lsst_apps-w_2015_45
     docker run -ti lsstsqre/centos:7-stack-lsst_apps-w_2015_45
 
-Now within the running docker container, you can load and run the LSST stack.
-Here we run the demo:
-
-.. code-block:: sh
-
-    source /opt/lsst/software/stack/loadLSST.bash
-    curl -L https://github.com/lsst/lsst_dm_stack_demo/archive/11.0.tar.gz | tar xvzf -
-    cd lsst_dm_stack_demo-11.0
-    setup obs_sdss
-    ./bin/demo.sh --small
+.. _vagrant-nebula-run:
 
 Running a Nebula instance with a pre-built science binaries
 -----------------------------------------------------------
@@ -113,7 +113,15 @@ Starting in your local shell, run `vagrant-nebula`_:
     vagrant ssh el7
 
 Now in the shell of the instance on Nebula, you can access the pre-built stack
-at ``/opt/lsst/software/stack``:
+at ``/opt/lsst/software/stack``.
+
+Running the "stack" demo
+------------------------
+
+From a shell on a VM or inside a running docker container, it is possible to
+run the "stack" demonstration repo.
+
+Here we run the demo:
 
 .. code-block:: sh
 
@@ -124,11 +132,37 @@ at ``/opt/lsst/software/stack``:
     ./bin/demo.sh --small
 
 
+Releasing Nebula resources
+--------------------------
+
+Exit from any containers, shells/ssh sessions, etc. and return to the prompt
+from which ``vagrant ssh ...`` was invoked.
+
+Destructive shutdown
+^^^^^^^^^^^^^^^^^^^^
+
+This will terminate the Nebula instance and release the the associated storage.
+*This is a destructive operation that destroys all data and is non-reversible.*
+
+.. code-block:: sh
+
+    vagrant destroy -f el7
+
+
+Preserve instance disk state and shutdown
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vagrant instances, or "boxes" in Vagrant-speak, which have been ``halt``-ed can be restarted by running ``vagrant up ....``.
+
+.. code-block:: sh
+
+    vagrant halt el7
+
+
 .. _nebula-images:
 
 OpenStack/Nebula images
 =======================
-
 
 Two images have been published under the LSST project on the NCSA Nebula system.
 
@@ -143,6 +177,7 @@ Two images have been published under the LSST project on the NCSA Nebula system.
    +--------------------------------------+---------------------------------------------------+
    | 3c36f5d9-2110-40d4-90da-c2ab89be8781 | centos-6-stack-lsst_apps-w_2015_45-20151113225236 |
    +--------------------------------------+---------------------------------------------------+
+
 
 .. _docker-containers:
 
@@ -175,6 +210,7 @@ Example of pulling and running a docker container
 
     docker pull lsstsqre/centos:7-stack-lsst_apps-w_2015_45
     docker run -ti lsstsqre/centos:7-stack-lsst_apps-w_2015_45
+
 
 See Also
 ========
