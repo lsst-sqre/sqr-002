@@ -19,6 +19,7 @@ Methods being evaluated include:
 - cernvmfs (see Fabio Hernandez's `lsst-cvmfs`_)
 - tarballs of an installed build tree
 - "all-in-one" RPMs
+- QEMU/KVM images
 
 .. _lsst-cvmfs: https://github.com/airnandez/lsst-cvmfs
 
