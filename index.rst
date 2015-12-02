@@ -205,7 +205,7 @@ Demo docker images have being published via Docker Hub under the
     +---------------------------------------------+
     | lsstsqre/centos:7-stack-lsst_apps-w_2015_45 |
     +---------------------------------------------+
-    | lsstsqre/centos:7-stack-lsst_apps-w_2015_45 |
+    | lsstsqre/centos:6-stack-lsst_apps-w_2015_45 |
     +---------------------------------------------+
 
 
