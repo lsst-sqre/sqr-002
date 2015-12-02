@@ -212,7 +212,7 @@ Demo docker images have being published via Docker Hub under the
 
 Example of pulling and running a docker container
 
-.. prompt:: bash
+.. code-block:: sh
 
     docker pull lsstsqre/centos:7-stack-lsst_apps-w_2015_45
     docker run -ti lsstsqre/centos:7-stack-lsst_apps-w_2015_45
