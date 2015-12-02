@@ -30,6 +30,7 @@ In this note, we describe two formats for pre-built binaries:
 
 * :ref:`nebula-images`
 * :ref:`docker-containers`
+* :ref:`aws-amis`
 
 Desired Feedback
 ----------------
@@ -211,11 +212,42 @@ Demo docker images have being published via Docker Hub under the
 
 Example of pulling and running a docker container
 
-.. code-block:: sh
+.. prompt:: bash
 
     docker pull lsstsqre/centos:7-stack-lsst_apps-w_2015_45
     docker run -ti lsstsqre/centos:7-stack-lsst_apps-w_2015_45
 
+
+.. _aws-ami:
+
+Amazon Web Services (AWS) AMIs
+==============================
+
+Public AMIs have be posted in the two most popular [Continental US] AWS
+regions. We are assuming that AWS/EC2 users are familiar with how to launch an
+instance.  AWS also provides copious documentation.  See `Launching an Instance`_ for a reasonable documentation entry point.
+
+.. _table-aws:
+
+.. table:: Available AMIs
+
+    +-----------+-------------------------------------------+
+    | region    | ami-id                                    |
+    +===========+===========================================+
+    | **centos-7-stack-lsst_apps-w_2015_45-20151130234354** |
+    +-----------+-------------------------------------------+
+    | us-east-1 | ami-e2490b88                              |
+    +-----------+-------------------------------------------+
+    | us-west-2 | ami-9a0f1dfb                              |
+    +-----------+-------------------------------------------+
+    | **centos-6-stack-lsst_apps-w_2015_45-20151130234301** |
+    +-----------+-------------------------------------------+
+    | us-east-1 | ami-e44b098e                              |
+    +-----------+-------------------------------------------+
+    | us-west-2 | ami-7b0b191a                              |
+    +-----------+-------------------------------------------+
+
+.. _Launching an Instance: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launching-instance.html
 
 See Also
 ========
@@ -224,3 +256,4 @@ See Also
 * :doc:`installing-vagrant`
 * :doc:`installing-docker`
 * `vagrant cheat sheet`_
+* `aws.amazon.com <https://aws.amazon.com/>`_
