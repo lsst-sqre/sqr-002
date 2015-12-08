@@ -43,8 +43,8 @@ description: 'Prototype binary science pipeline software distribution methods.'
 #
 #           You can have multiple paragraphs too.
 
-# URL where this document is published by Read the Docs. e.g. http://sqr-001.lsst.codes
-url: 'http://sqr-002.lsst.codes'
+# URL where this document is published by Read the Docs.
+url: 'http://sqr-002.lsst.io'
 
 # LSST Docushare URL, if authoritative versions of this are are stored there.
 # Leave as an empty string or comment out this key if there is no Docushare URL.

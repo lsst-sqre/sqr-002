@@ -4,7 +4,7 @@ SQR-002 Binary Science Pipeline Software Distribution
 
 Prototype binary science pipeline software distribution methods.
 
-View this technote at http://sqr-002.lsst.codes
+View this technote at http://sqr-002.lsst.io
 
 
 
@@ -36,7 +36,7 @@ A good primer on reStructuredText is available at http://docs.lsst.codes/en/late
 Remember that images and other types of assets should be stored in the ``_static/`` directory of this repository.
 See ``_static/README.rst`` for more information.
 
-The published technote at http://sqr-002.lsst.codes will be automatically rebuilt whenever you push your changes to the ``master`` branch on `GitHub <https://github.com/lsst-sqre/sqr-002>`_.
+The published technote at http://sqr-002.lsst.io will be automatically rebuilt whenever you push your changes to the ``master`` branch on `GitHub <https://github.com/lsst-sqre/sqr-002>`_.
 
 Updating metadata
 =================
