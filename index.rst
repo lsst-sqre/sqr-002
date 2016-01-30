@@ -13,6 +13,7 @@ automate this process.
 
 Methods being evaluated include:
 
+- Conda packages for Anaconda/Miniconda
 - OpenStack images on the NCSA Nebula system
 - AWS images (AMIs)
 - docker containers
@@ -28,6 +29,7 @@ Currently Available Formats
 
 In this note, we describe two formats for pre-built binaries:
 
+* :ref:`conda-packages`
 * :ref:`nebula-images`
 * :ref:`docker-containers`
 * :ref:`aws-amis`
@@ -42,6 +44,39 @@ Desired Feedback
 
 - How do binary products integrate into existing workflows?
 
+.. _conda-packages:
+
+Conda Packages
+==============
+
+A repo of "demo" conda packages (a "channel" in conda-speak) has been made
+available.  Presently, only packages built on RHEL5 are available that are
+expected to have broad compatibility across current distributions.  OSX packages
+are planned to be added in the future.
+
+The URL of the conda repo is: https://conda-test.lsst.codes/dev/
+
+Bootstrapping a Miniconda environment + installing LSST packages
+----------------------------------------------------------------
+
+This is an example of "bootstrapping" a new Miniconda environment under the user
+account's home directory, installing the conda packages for the LSST
+`lsst_apps` meta-package, and executing the "stack demo".
+
+.. code-block:: sh
+
+    curl -sSL https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh > miniconda.sh && bash miniconda.sh -b -p ~/miniconda && rm -f miniconda.sh
+    export PATH="$PWD/miniconda/bin:$PATH"
+    conda config --add channels https://conda-test.lsst.codes/dev/
+    conda install -y lsst-apps
+
+    # lives at ./miniconda/bin/eups-setups.sh
+    source eups-setups.sh
+
+    curl -L https://github.com/lsst/lsst_dm_stack_demo/archive/11.0.tar.gz | tar xvzf -
+    cd lsst_dm_stack_demo-11.0
+    setup obs_sdss
+    ./bin/demo.sh --small
 
 Vagrant based demonstration
 ===========================
