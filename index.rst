@@ -218,7 +218,7 @@ Example of pulling and running a docker container
     docker run -ti lsstsqre/centos:7-stack-lsst_apps-w_2015_45
 
 
-.. _aws-ami:
+.. _aws-amis:
 
 Amazon Web Services (AWS) AMIs
 ==============================
