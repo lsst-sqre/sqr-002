@@ -133,7 +133,7 @@ instance's shell, run docker:
 
 .. code-block:: sh
 
-    docker run -ti lsstsqre/centos:7-stack-lsst_distrib-w_2016_05
+    docker run -ti lsstsqre/centos:7-stack-lsst_distrib-w_2016_06
 
 .. _vagrant-nebula-run:
 
@@ -215,11 +215,15 @@ Two images have been published under the LSST project on the NCSA Nebula system.
    +======================================+======================================================+
    | **Centos 6**                                                                                |
    +--------------------------------------+------------------------------------------------------+
+   | 394dd556-75dd-486f-9ae9-2d82e229da44 | centos-6-stack-lsst_distrib-w_2016_06-20160212162209 |
+   +--------------------------------------+------------------------------------------------------+
    | 9f7c8bb8-9aca-4e71-9ce8-afab0dd9a8d2 | centos-6-stack-lsst_distrib-w_2016_05-20160211215747 |
    +--------------------------------------+------------------------------------------------------+
    | 3c36f5d9-2110-40d4-90da-c2ab89be8781 | centos-6-stack-lsst_apps-w_2015_45-20151113225236    |
    +--------------------------------------+------------------------------------------------------+
    | **Centos 7**                                                                                |
+   +--------------------------------------+------------------------------------------------------+
+   | 3e653df2-2f20-44f4-a79a-bc736d7a5eb5 | centos-7-stack-lsst_distrib-w_2016_06-20160212162209 |
    +--------------------------------------+------------------------------------------------------+
    | 36e5d388-d805-4b23-989c-82d6b868e1d2 | centos-7-stack-lsst_distrib-w_2016_05-20160211215747 |
    +--------------------------------------+------------------------------------------------------+
@@ -248,11 +252,15 @@ Demo docker images have being published via Docker Hub under the
     +================================================+
     | **Centos 6**                                   |
     +------------------------------------------------+
+    | lsstsqre/centos:6-stack-lsst_distrib-w_2016_06 |
+    +------------------------------------------------+
     | lsstsqre/centos:6-stack-lsst_distrib-w_2016_05 |
     +------------------------------------------------+
     | lsstsqre/centos:6-stack-lsst_apps-w_2015_45    |
     +------------------------------------------------+
     | **Centos 7**                                   |
+    +------------------------------------------------+
+    | lsstsqre/centos:7-stack-lsst_distrib-w_2016_06 |
     +------------------------------------------------+
     | lsstsqre/centos:7-stack-lsst_distrib-w_2016_05 |
     +------------------------------------------------+
@@ -263,7 +271,7 @@ Example of pulling and running a docker container
 
 .. code-block:: sh
 
-    docker run -ti lsstsqre/centos:7-stack-lsst_distrib-w_2016_05
+    docker run -ti lsstsqre/centos:7-stack-lsst_distrib-w_2016_06
 
 
 .. _aws-amis:
