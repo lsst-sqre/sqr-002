@@ -73,8 +73,8 @@ account's home directory, installing the conda packages for the LSST
     # lives at ./miniconda/bin/eups-setups.sh
     source eups-setups.sh
 
-    curl -L https://github.com/lsst/lsst_dm_stack_demo/archive/11.0.tar.gz | tar xvzf -
-    cd lsst_dm_stack_demo-11.0
+    curl -L https://github.com/lsst/lsst_dm_stack_demo/archive/master.tar.gz | tar xvzf -
+    cd lsst_dm_stack_demo-master
     setup obs_sdss
     ./bin/demo.sh --small
 
@@ -166,8 +166,8 @@ Here we run the demo:
 .. code-block:: sh
 
     source /opt/lsst/software/stack/loadLSST.bash
-    curl -L https://github.com/lsst/lsst_dm_stack_demo/archive/11.0.tar.gz | tar xvzf -
-    cd lsst_dm_stack_demo-11.0
+    curl -L https://github.com/lsst/lsst_dm_stack_demo/archive/master.tar.gz | tar xvzf -
+    cd lsst_dm_stack_demo-master
     setup obs_sdss
     ./bin/demo.sh --small
 
@@ -215,6 +215,8 @@ Two images have been published under the LSST project on the NCSA Nebula system.
    +======================================+======================================================+
    | **Centos 6**                                                                                |
    +--------------------------------------+------------------------------------------------------+
+   | 2ee625d0-bada-4446-831e-c3982f75771e | centos-6-stack-lsst_distrib-w_2016_20-20160516164545 |
+   +--------------------------------------+------------------------------------------------------+
    | 0d37b6c8-17eb-4ff7-980e-9f3731f9993d | centos-6-stack-lsst_distrib-w_2016_08-20160218231947 |
    +--------------------------------------+------------------------------------------------------+
    | 394dd556-75dd-486f-9ae9-2d82e229da44 | centos-6-stack-lsst_distrib-w_2016_06-20160212162209 |
@@ -224,6 +226,8 @@ Two images have been published under the LSST project on the NCSA Nebula system.
    | 3c36f5d9-2110-40d4-90da-c2ab89be8781 | centos-6-stack-lsst_apps-w_2015_45-20151113225236    |
    +--------------------------------------+------------------------------------------------------+
    | **Centos 7**                                                                                |
+   +--------------------------------------+------------------------------------------------------+
+   | 2c6ae965-502f-4c43-b486-02e5a865d81b | centos-7-stack-lsst_distrib-w_2016_20-20160516164545 |
    +--------------------------------------+------------------------------------------------------+
    | 0f1963d5-e9f3-464f-a4e4-308d83b47b76 | centos-7-stack-lsst_distrib-w_2016_08-20160218231947 |
    +--------------------------------------+------------------------------------------------------+
@@ -256,6 +260,8 @@ Demo docker images have being published via Docker Hub under the
     +================================================+
     | **Centos 6**                                   |
     +------------------------------------------------+
+    | lsstsqre/centos:6-stack-lsst_distrib-w_2016_20 |
+    +------------------------------------------------+
     | lsstsqre/centos:6-stack-lsst_distrib-w_2016_08 |
     +------------------------------------------------+
     | lsstsqre/centos:6-stack-lsst_distrib-w_2016_06 |
@@ -265,6 +271,8 @@ Demo docker images have being published via Docker Hub under the
     | lsstsqre/centos:6-stack-lsst_apps-w_2015_45    |
     +------------------------------------------------+
     | **Centos 7**                                   |
+    +------------------------------------------------+
+    | lsstsqre/centos:7-stack-lsst_distrib-w_2016_20 |
     +------------------------------------------------+
     | lsstsqre/centos:7-stack-lsst_distrib-w_2016_08 |
     +------------------------------------------------+
