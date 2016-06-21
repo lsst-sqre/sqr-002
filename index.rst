@@ -307,6 +307,9 @@ Public AMIs have be posted in the two most popular [Continental US] AWS
 regions. We are assuming that AWS/EC2 users are familiar with how to launch an
 instance.  AWS also provides copious documentation.  See `Launching an Instance`_ for a reasonable documentation entry point.
 
+Note that ``cloud-init-growpart`` is not working in this images.  The instance
+will have a fixed size of 40GiB.
+
 .. _table-aws:
 
 .. table:: Available AMIs
@@ -314,11 +317,23 @@ instance.  AWS also provides copious documentation.  See `Launching an Instance`
     +-----------+-------------------------------------------+
     | region    | ami-id                                    |
     +===========+===========================================+
+    | **centos-7-stack-lsst_distrib-v12_0-20160621201423**  |
+    +-----------+-------------------------------------------+
+    | us-east-1 | ami-de11d2b3                              |
+    +-----------+-------------------------------------------+
+    | us-west-2 | ami-0e498d6e                              |
+    +-----------+-------------------------------------------+
     | **centos-7-stack-lsst_apps-w_2015_45-20151130234354** |
     +-----------+-------------------------------------------+
     | us-east-1 | ami-e2490b88                              |
     +-----------+-------------------------------------------+
     | us-west-2 | ami-9a0f1dfb                              |
+    +-----------+-------------------------------------------+
+    | **centos-6-stack-lsst_distrib-v12_0-201606211914161** |
+    +-----------+-------------------------------------------+
+    | us-east-1 | ami-350dce58                              |
+    +-----------+-------------------------------------------+
+    | us-west-2 | ami-5d4e8a3d                              |
     +-----------+-------------------------------------------+
     | **centos-6-stack-lsst_apps-w_2015_45-20151130234301** |
     +-----------+-------------------------------------------+
